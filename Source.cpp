@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 #include <vector>
 #include "Classes.h"
 using namespace std;
