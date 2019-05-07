@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <cstdio>
 #include <stdlib.h>
@@ -125,7 +127,7 @@ int main(int argc, char* argv[]){
 				for (int j=3; j<strlen(argv[i]); j++){
 					str += argv[i][j];
 				}
-				sscanf_s(str.c_str(),"%d_%d",&quantum,&maxprio);
+				sscanf(str.c_str(),"%d_%d",&quantum,&maxprio);
 				scheduler = new PRIO(quantum, maxprio);
 			}
 			else if (spec == 'E'){
@@ -133,7 +135,7 @@ int main(int argc, char* argv[]){
 				for (int j=3; j<strlen(argv[i]); j++){
 					str += argv[i][j];
 				}
-				sscanf_s(str.c_str(),"%d_%d",&quantum,&maxprio);
+				sscanf(str.c_str(),"%d_%d",&quantum,&maxprio);
 				scheduler = new EPRIO(quantum, maxprio,verbose);
 				E_scheduler = true;
 			}
