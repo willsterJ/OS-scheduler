@@ -7,14 +7,15 @@ CXXFLAGS = -Wall -g
 
 # ****************************************************
 # Targets needed to bring the executable up to date
+default: sched
 
-sched: source.o classes.o
-	$(CXX) $(CXXFLAGS) -o sched source.o classes.o
+sched: Source.o Classes.o
+	$(CXX) $(CXXFLAGS) -o sched Source.o Classes.o
 
-source.o: Source.cpp Classes.h
+Source.o: Source.cpp Classes.h
 	$(CXX) $(CXXFLAGS) -c Source.cpp
 
-classes.o: Classes.cpp Classes.h
+Classes.o: Classes.cpp Classes.h
 	$(CXX) $(CXXFLAGS) -c Classes.cpp
 
 clean:
