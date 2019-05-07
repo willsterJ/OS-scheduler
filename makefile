@@ -16,3 +16,4 @@ source.o: Source.cpp Classes.h
 	$(CXX) $(CXXFLAGS) -c Source.cpp
 
 classes.o: Classes.h
+	$(CXX) $(CXXFLAGS) -c Classes.cpp
